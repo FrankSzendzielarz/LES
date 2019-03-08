@@ -14,6 +14,8 @@ The rest of this document contains:
 
 2. A summary of each of the above documents along with a collection of my opinions on the LES capacity management recommendations in the above two links.
 
+A note: 'client' can mean an Ethereum implementation or it can mean a light-client peer in a client-server role in the p2p network. Depends on context. We should come up with some better terminology.
+
 ## Summary (TL/DR)
 
 1. Server operators would most likely prefer to see a setup where they can specify their throttling approach in some configurable and flexible set of 'policies'. Azure, for example, [offers a number of types of policy configuration](https://docs.microsoft.com/en-us/azure/api-management/api-management-sample-flexible-throttling), where a config file is used to specify if rate limiting is per IP, per user, per client etc., what total quotas should be over longer periods, and so on. If a server wants to specify that certain groups of clients should be burst-limited to N requests per second on average but with total M megabytes bandwidth per day, that can't be achieved with the below approaches.  
