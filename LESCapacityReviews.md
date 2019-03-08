@@ -28,7 +28,7 @@ A note: 'client' can mean an Ethereum implementation or it can mean a light-clie
 
 5. Unlike the proposals in the documents below, I do not think there should be any obligation on clients to try and maintain a mirror of the state of each server's token bucket or other limiting algorithm to work out how to throttle calls to that server. It complicates client development. A far simpler approach is to have the server issue a warning that some eviction rule is about to be violated. The server can then make a dynamic assesment of how to handle that. The client could also receive messages that the server is overloaded, which is unrelated to the throttling policy. The main body of the work would be getting agreement on the elements to include in a policy configuration structure and their meanings (rate limit vs quota vs response time etc), and specifying a couple of control messages or response codes (server overloaded, etc) and a request/reply message exchange to obtain the policy from the server if desired.
 
-6. I think we need an agreed set of higher level design goals that declare something like "implementing clients should be really easy because we want the Ethereum ecosystem to expand" and that "server operators should be able to choose their own throttling approaches and not be limited to client implementation mandates."
+6. I think we need an agreed set of higher level design goals that declare something like "implementing light clients should be really easy because we want the Ethereum ecosystem to expand" and that "server operators should be able to choose their own throttling approaches and not be limited to client implementation mandates."
 
 ## Flow Control
 
