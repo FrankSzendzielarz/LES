@@ -94,7 +94,7 @@ The document is quite hard to read if you are not already in context, so the fol
 
 2. The real cost and real capacity of the server depends on how each type of request affects the different performance characteristics of the server. How does the server know that memory reduction is going to affect total capacity for example, and how does it calculate the costs?
 
-3. Forced evictions made according to fluctuating server capacity or the joining of new free/priority light peers just makes light client development hard and usage unreliable. I thank it is preferable if all stale connections get dropped after some period of inactivity, or whenever a client explicitly disconnects. If the server is unable to serve some of the connected light clients because of a transient fault, what rationale is there for converting that transient fault into a set of disconnections and terminating their service?
+3. Forced evictions made according to fluctuating server capacity or the joining of new free/priority light peers just makes light client development hard and usage unreliable. I think it is preferable if all stale connections get dropped after some period of inactivity, or whenever a client explicitly disconnects. If the server is unable to serve some of the connected light clients because of a transient fault, what rationale is there for converting that transient fault into a set of disconnections and terminating their service?
 
 4. Clients could just be notified that the server is overloaded. It would be up to them to find new servers. Persistent server overload or denial (lack of payment for example) would eventually cause the client to look elsewhere. The client would abandon their connection, which would eventually be closed.
 
