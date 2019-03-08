@@ -24,13 +24,13 @@ The rest of the document is:
 
 4. The throttling/eviction/etc policy (which could include per message costs for example) _could_ be provided by the server as a hint to the client. I think this could be an optional request/reply call to the server and agreeing the message format across the implementers would be trivial as it would mirror the config file. It _need_ not be part of handshakes.
 
-5. Unlike the proposals in the documents below, I do not think there should be any obligation on clients to try and maintain a mirror of the state of each server's token bucket or other limiting algorithm to work out how to throttle calls to that server. It complicates client development. A far simpler approach is to have the server issue a warning that some eviction rule is about to be violated. The server can then make a dynamic assesment of how to handle that. The client could also receive messages that the server is overloaded, which is unrelated to the throttling policy.
+5. Unlike the proposals in the documents below, I do not think there should be any obligation on clients to try and maintain a mirror of the state of each server's token bucket or other limiting algorithm to work out how to throttle calls to that server. It complicates client development. A far simpler approach is to have the server issue a warning that some eviction rule is about to be violated. The server can then make a dynamic assesment of how to handle that. The client could also receive messages that the server is overloaded, which is unrelated to the throttling policy. The main body of the work would be getting agreement on the elements to include in a policy configuration structure and their meanings (rate limit vs quota vs response time etc), and specifying a couple of control messages or response codes (server overloaded, etc) and a request/reply message exchange to obtain the policy from the server if desired.
 
 6. I think we need an agreed set of higher level design goals that declare something like "implementing clients should be really easy because we want the Ethereum ecosystem to expand" and that "server operators should be able to choose their own throttling approaches and not be limited to client implementation mandates."
 
 ## Flow Control
 
-### Document Summary (Flow Control)
+### Document Summary ([Flow Control](https://github.com/zsfelfoldi/go-ethereum/wiki/Client-Side-Flow-Control-model-for-the-LES-protocol))
 
 The document suggests that the design goals include the following:
 
@@ -70,7 +70,7 @@ With those design goals, the document proposes a model that can be summarised as
 
 ## Server Capacity Management
 
-### Document Summary (Server Capacity Management)
+### Document Summary ([Server Capacity Management](https://gist.github.com/zsfelfoldi/8d1dfa05ce1e4b50ea5fe1573fb461d6)  )
 
 The document is quite hard to read if you are not already in context, so the following summary is just my understanding of it.
 
