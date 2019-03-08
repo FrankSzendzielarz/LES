@@ -1,18 +1,18 @@
 # LES Capacity Management Review
 
-There are a couple of documents floating around that have a go at specifying how ethereum clients should handle light client capacity and load:
+There are a couple of documents floating around that have a go at specifying how ethereum 'light-client servers' should handle 'light-client' capacity and load:
 
 1. A flow control [document](https://github.com/zsfelfoldi/go-ethereum/wiki/Client-Side-Flow-Control-model-for-the-LES-protocol)
 
 2. A server rate limiting [document](https://gist.github.com/zsfelfoldi/8d1dfa05ce1e4b50ea5fe1573fb461d6)  
 
-Parity seems to have its own LES message spec too, but it says little about client/server rate limiting.
+Parity Tech seems to have its own LES message spec too, but it says little about client/server rate limiting.
 
-The rest of the document is:
+The rest of this document contains:
 
-1. The TL/DR of opinions/recommendations.
+1. The TL/DR of my opinions/recommendations on this topic of _light_ server capacity regulation.
 
-2. A summary of each of the above documents along with a collection of opinions on the LES capacity management recommendations in the above two links.
+2. A summary of each of the above documents along with a collection of my opinions on the LES capacity management recommendations in the above two links.
 
 ## Summary (TL/DR)
 
