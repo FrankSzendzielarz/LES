@@ -18,7 +18,7 @@ The rest of this document contains:
 
 1. Server operators would most likely prefer to see a setup where they can specify their throttling approach in some configurable and flexible set of 'policies'. Azure, for example, [offers a number of types of policy configuration](https://docs.microsoft.com/en-us/azure/api-management/api-management-sample-flexible-throttling), where a config file is used to specify if rate limiting is per IP, per user, per client etc., what total quotas should be over longer periods, and so on. If a server wants to specify that certain groups of clients should be burst-limited to N requests per second on average but with total M megabytes bandwidth per day, that can't be achieved with the below approaches.  
 
-2. *I propose concentrating on defining a commonly agreed on policy configuration format that is general enough to encompass burst-control rate-limits (token buckets), periodic quotas (requests or bandwidth per day for example), eviction rules, response times, and client categories (free, premium, etc)*
+2. *I propose concentrating on defining a commonly agreed-on policy configuration format that is general enough to encompass burst-control rate-limits (token buckets), periodic quotas (requests or bandwidth per day for example), eviction rules, response times, and client categories (free, premium, etc)*
 
 3. A common general format allows for flexibility in implementation, and allows consensus to be arrived at more easily between Geth, Parity and other client implementers, while also being potentially useful to other protocols, such as Swarm.
 
