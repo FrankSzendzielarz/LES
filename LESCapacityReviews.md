@@ -8,11 +8,13 @@ There are a couple of documents floating around that have a go at specifying how
 
 Parity Tech seems to have its own LES message spec too, but it says little about client/server rate limiting.
 
-The rest of this document contains:
+The rest of this file contains:
 
 1. The TL/DR of my opinions/recommendations on this topic of _light_ server capacity regulation.
 
 2. A summary of each of the above documents along with a collection of my opinions on the LES capacity management recommendations in the above two links.
+
+The aim is to provide a review of the current proposals, get a bunch of people involved in discussions around this doc and adding issues on github, in the hope that all those people from different elements of the Ethereum community will quickly agree on a way forward for LES that is common to all implementations.
 
 A note: 'client' can mean an Ethereum implementation or it can mean a light-client peer in a client-server role in the p2p network. Depends on context. We should come up with some better terminology.
 
